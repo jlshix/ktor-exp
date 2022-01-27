@@ -1,0 +1,11 @@
+### index
+GET http://localhost:8080/
+
+### locations
+GET http://localhost:8080/locations/mario
+
+### exception
+GET http://localhost:8080/exceptions/404
+
+### static
+GET http://localhost:8080/static/index.html
