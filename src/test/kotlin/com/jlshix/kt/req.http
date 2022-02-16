@@ -9,3 +9,13 @@ GET http://localhost:8080/exceptions/404
 
 ### static
 GET http://localhost:8080/static/index.html
+
+### domain basicInfo 404
+GET http://localhost:8080/api/hospitals/noHospital/records/20223456/basicInfo
+
+### suqian basicInfo 404
+GET http://localhost:8080/api/hospitals/suqian/records/20223456/basicInfo
+
+### suqian basicInfo 200
+GET http://localhost:8080/api/hospitals/suqian/records/sq091401/basicInfo
+
