@@ -31,6 +31,7 @@ dependencies {
     // ktorm
     implementation("org.ktorm:ktorm-core:$ktormVersion")
     implementation("org.ktorm:ktorm-jackson:$ktormVersion")
+    implementation("mysql:mysql-connector-java:8.0.26")
     // test
     testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
