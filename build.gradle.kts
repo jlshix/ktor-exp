@@ -1,4 +1,5 @@
 val ktorVersion: String by project
+val ktormVersion: String by project
 val kotlinVersion: String by project
 val logbackVersion: String by project
 
@@ -19,12 +20,18 @@ repositories {
 }
 
 dependencies {
+    // ktor
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-locations:$ktorVersion")
     implementation("io.ktor:ktor-server-host-common:$ktorVersion")
     implementation("io.ktor:ktor-serialization:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
+    // logback
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
+    // ktorm
+    implementation("org.ktorm:ktorm-core:$ktormVersion")
+    implementation("org.ktorm:ktorm-jackson:$ktormVersion")
+    // test
     testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
