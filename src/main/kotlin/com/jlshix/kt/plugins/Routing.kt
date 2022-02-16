@@ -36,8 +36,14 @@ fun Application.configureRouting() {
         }
         install(StatusPages) {
             exception<PathNotExistException> { cause ->
-                call.respondText(
-                    text = cause.message?:cause.toString(),
+                call.respond(
+                    message = mapOf("error" to cause.message),
+                    status = HttpStatusCode.NotFound
+                )
+            }
+            exception<NotFoundException> { cause ->
+                call.respond(
+                    message = mapOf("error" to cause.message),
                     status = HttpStatusCode.NotFound
                 )
             }
