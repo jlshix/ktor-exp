@@ -1,5 +1,6 @@
 package com.jlshix.kt
 
+import com.jlshix.kt.mrr.hospitals.domain.domainRouter
 import io.ktor.application.*
 import com.jlshix.kt.plugins.*
 
@@ -11,4 +12,5 @@ fun Application.main() {
     configureRouting()
     configureHTTP()
     configureSerialization()
+    domainRouter()
 }
